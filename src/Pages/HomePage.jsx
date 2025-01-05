@@ -5,6 +5,7 @@ import HomeCover from "../Sections/HomeCover";
 import HomeSwiper from "../Sections/HomeSwiper";
 import PopularMenu from "../Sections/PopularMenu";
 import RecommendedMenu from "../Sections/RecommendedMenu";
+import Testimonials from "../Sections/TestimonialSection";
 
 const HomePage = () => {
     return (
@@ -16,6 +17,7 @@ const HomePage = () => {
         <CallUs/>
         <RecommendedMenu/>
         <Featured/>
+        <Testimonials/>
         </>
     );
 };
