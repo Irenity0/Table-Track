@@ -1,4 +1,4 @@
-import Cover from "./Cover";
+import Cover from "../components/Cover";
 import banner from '../assets/home/chef-service.jpg'
 
 const HomeCover = () => {

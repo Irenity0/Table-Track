@@ -1,6 +1,8 @@
-import HomeBanner from "../components/HomeBanner";
-import HomeCover from "../components/HomeCover";
-import HomeSwiper from "../components/HomeSwiper";
+import CallUs from "../Sections/CallUs";
+import HomeBanner from "../Sections/HomeBanner";
+import HomeCover from "../Sections/HomeCover";
+import HomeSwiper from "../Sections/HomeSwiper";
+import PopularMenu from "../Sections/PopularMenu";
 
 const HomePage = () => {
     return (
@@ -8,6 +10,8 @@ const HomePage = () => {
         <HomeBanner/>
         <HomeSwiper/>
         <HomeCover/>
+        <PopularMenu/>
+        <CallUs/>
         </>
     );
 };
