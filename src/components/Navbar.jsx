@@ -37,7 +37,7 @@ const Navbar = () => {
                 {navOptions}
               </ul>
             </div>
-            <a className="text-xl">Bistro Boss</a>
+            <a className="text-xl">Table Track</a>
           </div>
           <div className="navbar-end hidden lg:flex">
             <ul className="menu menu-horizontal px-1">
