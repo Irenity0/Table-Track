@@ -1,4 +1,5 @@
 import HomeBanner from "../components/HomeBanner";
+import HomeCover from "../components/HomeCover";
 import HomeSwiper from "../components/HomeSwiper";
 
 const HomePage = () => {
@@ -6,6 +7,7 @@ const HomePage = () => {
         <>
         <HomeBanner/>
         <HomeSwiper/>
+        <HomeCover/>
         </>
     );
 };
