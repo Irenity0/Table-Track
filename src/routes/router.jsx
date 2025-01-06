@@ -3,6 +3,10 @@ import RootLayout from "../Layouts/RootLayout";
 import HomePage from "../Pages/HomePage";
 import MenuPage from "../Pages/MenuPage";
 import ShopPage from "../Pages/ShopPage";
+import LoginPage from "../Pages/LoginPage";
+import RegisterPage from "../Pages/RegisterPage";
+import HomeBanner from "../Sections/HomeBanner";
+import PrivateRoute from "./privateRoute";
 
 const router = createBrowserRouter([
     {
@@ -20,6 +24,18 @@ const router = createBrowserRouter([
             {
                 path: '/shop/:category',
                 element: <ShopPage/>
+            },
+            {
+                path: '/login',
+                element: <LoginPage/>
+            }, 
+            {
+                path: '/register',
+                element: <RegisterPage/>
+            }, 
+            {
+                path: 'secret',
+                element: <PrivateRoute><HomeBanner/></PrivateRoute>
             }
         ]
     }

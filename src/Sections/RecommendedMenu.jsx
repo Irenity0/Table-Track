@@ -4,7 +4,6 @@ import useMenu from "../hooks/useMenu";
 
 const RecommendedMenu = () => {
     const [menu] = useMenu();
-    console.log(menu);
 
     return (
         <>
