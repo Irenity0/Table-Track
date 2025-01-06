@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { AuthContext } from "../providers/AuthProvider";
 import { useContext } from "react";
+import { FaShoppingCart } from "react-icons/fa";
 
 const Navbar = () => {
 
@@ -18,6 +19,14 @@ const Navbar = () => {
                 <li><Link to={"/dashboard"}>Dashboard</Link></li>
                 <li><Link to={'/menu'}>Our Menu</Link></li>
                 <li><Link to={'/shop/salad'}>Our Shop</Link></li>
+                <li>
+                  <Link to={'/'}>
+                    <button className="btn btn-xs">
+                    <FaShoppingCart /> 
+                      <div className="badge badge-secondary">+0</div>
+                    </button>
+                  </Link>
+                </li>
                 
                 {
                   user ? <>
