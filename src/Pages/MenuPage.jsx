@@ -20,7 +20,7 @@ const MenuPage = () => {
     return (
         <>
         <Helmet> 
-            <title>Bistro Boss | Menu</title>
+            <title>Table Track | Menu</title>
         </Helmet>
         <section className="space-y-10">
             {/* main cover */}
