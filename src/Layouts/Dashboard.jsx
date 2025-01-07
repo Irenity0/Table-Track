@@ -19,14 +19,14 @@ const Dashboard = () => {
                 <li><NavLink to={'/dashboard/cart'}>  <FaCartShopping/> My Cart  ({cart.length})</NavLink></li>
                 <li><NavLink to={'/dashboard/cart'}>  <MdReviews/> Add Review</NavLink></li>
                 <li><NavLink to={'/dashboard/cart'}> <FaHome></FaHome> My Booking</NavLink></li>
-                <hr />
+                <div className="divider"></div>
                 <li><NavLink to={'/'}> <FaHome></FaHome> Home</NavLink></li>
                 <li><NavLink to={'/menu'}> <MdMenu />  Menu</NavLink></li>
                 <li><NavLink to={'/shop/salad'}> <FaCartShopping/> Shop</NavLink></li>
                 <li><NavLink to={'/contact'}> <FaPhone/> Contact</NavLink></li>
             </ul>
         </div>
-        <div className="flex-1">
+        <div className="flex-1 p-8">
             <Outlet/>
         </div>
         </section>
