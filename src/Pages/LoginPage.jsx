@@ -4,6 +4,7 @@ import { useContext, useEffect, useState } from 'react';
 import { Helmet } from 'react-helmet';
 import { AuthContext } from '../providers/AuthProvider';
 import Swal from 'sweetalert2';
+import SocialLogin from '../components/SocialLogin';
 
 
 const LoginPage = () => {
@@ -97,6 +98,7 @@ const LoginPage = () => {
                             </div>
                         </form>
                         <p><small>New Here? <Link to="/register">Create an account</Link> </small></p>
+                        <SocialLogin/>
                     </div>
                 </div>
             </div>
