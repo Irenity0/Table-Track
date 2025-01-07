@@ -9,6 +9,7 @@ import HomeBanner from "../Sections/HomeBanner";
 import PrivateRoute from "./privateRoute";
 import Dashboard from "../Layouts/Dashboard";
 import DashboardCart from "../Pages/DashboardCart";
+import DashboardAllUsers from "../Pages/DashboardAllUsers";
 
 const router = createBrowserRouter([
     {
@@ -48,6 +49,10 @@ const router = createBrowserRouter([
             {
                 path: "cart",
                 element: <DashboardCart/>
+            },
+            {
+                path: 'users',
+                element: <DashboardAllUsers/> 
             }
         ]
     }
