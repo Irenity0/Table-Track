@@ -16,6 +16,8 @@ import DashboardManageItems from "../Pages/DashboardManageItems";
 import DashboardUpdateItem from "../Pages/DashboardUpdateItem";
 import PaymentPage from "../Pages/PaymentPage";
 import PaymentHistory from "../Pages/PaymentHistory";
+import DashboardAdminHome from "../Pages/DashboardAdminHome";
+import DashboardUserHome from "../Pages/DashboardUserHome";
 
 const router = createBrowserRouter([
     {
@@ -53,6 +55,10 @@ const router = createBrowserRouter([
         element: <PrivateRoute><Dashboard/></PrivateRoute>,
         children: [
             {
+                path: 'userHome',
+                element: <PrivateRoute><DashboardUserHome/></PrivateRoute>
+            },
+            {
                 path: "cart",
                 element: <PrivateRoute><DashboardCart/></PrivateRoute>
             },
@@ -63,6 +69,11 @@ const router = createBrowserRouter([
             {
                 path: 'paymentHistory',
                 element: <PaymentHistory/>
+            },
+            // admin routes
+            {
+                path: 'adminHome',
+                element: <AdminRoute><DashboardAdminHome/></AdminRoute>
             },
             {
                 path: 'users',
@@ -79,7 +90,7 @@ const router = createBrowserRouter([
             {
                 path: 'updateItem/:id',
                 element: <AdminRoute><DashboardUpdateItem/></AdminRoute>,
-                loader: ({params}) => fetch(`http://localhost:5000/menu/${params.id}`)
+                loader: ({params}) => fetch(`https://table-track-server.vercel.app/menu/${params.id}`)
             }
         ]
     }
