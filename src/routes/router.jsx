@@ -14,6 +14,8 @@ import DashboardAddItems from "../Pages/DashboardAddItems";
 import AdminRoute from "./AdminRoutes";
 import DashboardManageItems from "../Pages/DashboardManageItems";
 import DashboardUpdateItem from "../Pages/DashboardUpdateItem";
+import PaymentPage from "../Pages/PaymentPage";
+import PaymentHistory from "../Pages/PaymentHistory";
 
 const router = createBrowserRouter([
     {
@@ -55,6 +57,14 @@ const router = createBrowserRouter([
                 element: <PrivateRoute><DashboardCart/></PrivateRoute>
             },
             {
+                path: 'payment',
+                element: <PrivateRoute><PaymentPage/></PrivateRoute>   
+            },
+            {
+                path: 'paymentHistory',
+                element: <PaymentHistory/>
+            },
+            {
                 path: 'users',
                 element: <AdminRoute><DashboardAllUsers/> </AdminRoute>
             }, 
@@ -70,7 +80,7 @@ const router = createBrowserRouter([
                 path: 'updateItem/:id',
                 element: <AdminRoute><DashboardUpdateItem/></AdminRoute>,
                 loader: ({params}) => fetch(`http://localhost:5000/menu/${params.id}`)
-              }
+            }
         ]
     }
 ])
